@@ -1,0 +1,262 @@
+:root {
+    --primary: #5d4037;
+    --secondary: #8d6e63;
+    --light: #efebe9;
+    --dark: #3e2723;
+    --accent: #d7ccc8;
+    --text: #4e342e;
+  }
+  
+  body {
+    font-family: 'Crimson Text', 'Palatino Linotype', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.5rem;
+    color: var(--dark);
+    font-weight: normal;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--secondary);
+    margin: 10px auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--accent);
+  }
+  
+  th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .action-btn {
+    padding: 10px 18px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: var(--dark);
+    transform: translateY(-1px);
+  }
+  
+  button {
+    padding: 6px 12px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--dark);
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 2px;
+    margin-top: 20px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--dark);
+  }
+  
+  .navbar {
+    background-color: var(--dark);
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .navbar a:hover {
+    background-color: var(--primary);
+  }
+  
+  .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover::after {
+    width: 70%;
+    left: 15%;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 50%;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--secondary);
+    transition: all 0.3s ease;
+  }
+  
+  .close:hover {
+    color: var(--dark);
+    transform: rotate(90deg);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent);
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  select:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(141, 110, 99, 0.2);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 80%;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      font-size: 14px;
+    }
+    
+    th, td {
+      padding: 8px 10px;
+    }
+    
+    .modal-content {
+      width: 95%;
+      padding: 20px;
+    }
+    
+    .navbar a {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 1.8rem;
+    }
+  }

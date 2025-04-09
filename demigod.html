@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Semideuses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Deuses</a>
+        <a href="demigod.html">Semideuses</a>
+    </nav>
+
+    <div class="container">
+        <h1>Heróis e Semideuses</h1>
+        <button id="addDemigodBtn" class="action-btn">Adicionar Semideus</button>
+
+        <table id="demigodsTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Deus Pai/Mãe</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os semideuses serão listados aqui via JS -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para adicionar/editar semideus -->
+    <div id="demigodModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitleDemigod">Adicionar Semideus</h2>
+            <form id="demigodForm">
+                <div class="form-group">
+                    <label for="nameDemigod">Nome:</label>
+                    <input type="text" id="nameDemigod" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descrição:</label>
+                    <input type="text" id="description" name="description" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="parent">Deus Pai/Mãe:</label>
+                    <select id="parent" name="parent" required>
+                        <!-- Os deuses serão carregados aqui via JS -->
+                    </select>
+                </div>
+
+                <button type="submit" id="saveDemigodBtn" class="submit-btn">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="demigod.js"></script>
+</body>
+</html>
