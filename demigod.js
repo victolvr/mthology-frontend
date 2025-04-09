@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const apiUrl = "http://localhost:3000/api"
+    const apiUrl = "https://mythology-backend.onrender.com/api"
     const demigodModal = document.getElementById("demigodModal")
     const demigodForm = document.getElementById("demigodForm")
     const addDemigodBtn = document.getElementById("addDemigodBtn")
